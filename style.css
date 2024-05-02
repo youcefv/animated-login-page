@@ -76,6 +76,7 @@
 
 			input:is([type="email"], [type="password"]):focus+label {
 				top: -1.125rem;
+				left: 0;
 				font-style: normal;
 				color: var(--clr-primary);
 			}
@@ -90,11 +91,15 @@
 				font-style: italic;
 				color: hsla(0, 0%, 100%, 0.5);
 				user-select: none;
-				transition: top 300ms, font-style 300ms;
+				transition:
+					top 300ms,
+					left 300ms,
+					font-style 300ms;
 			}
 
 			.bi {
 				font-size: 1.25rem;
+				margin-right: 1rem;
 			}
 
 			button[type="submit"] {
