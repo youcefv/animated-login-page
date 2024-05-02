@@ -1,0 +1,146 @@
+@import url(./fonts.css);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--clr-primary: hsl(0, 0%, 100%);
+}
+
+.ctn {
+	font-family: Roboto;
+	color: var(--clr-primary);
+
+	width: 100%;
+	min-height: 100vh;
+	min-height: 100dvh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-image: url(./images/background6.jpg);
+	background-position: 50% 50%;
+	background-size: 100%;
+
+	.frm {
+		width: 25rem;
+		border: 1px solid var(--clr-primary);
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		
+		padding: 1rem;
+		border: 2px solid var(--clr-primary);
+		border-radius: 1rem;
+		background-color: transparent;
+		backdrop-filter: blur(8px);
+
+		h2 {
+			font-size: 2.25rem;
+		}
+
+		.frm-group, .remember-me {
+			display: flex;
+			align-items: center;
+
+			width: 100%;
+			min-height: 3rem;
+		}
+
+		.frm-group {
+			position: relative;
+			
+			&:has(:is([type="email"], [type="password"])) {
+				margin-top: 2rem;
+				border-bottom: 2px solid var(--clr-primary);
+			}
+
+			input:is([type="email"], [type="password"]) {
+				outline: none;
+				color: var(--clr-primary);
+				border: none;
+				width: 100%;
+				font-size: 1.25rem;
+				padding-inline: .5rem;
+				background-color: transparent;
+
+				align-self: stretch;
+			}
+
+			input:is([type="email"], [type="password"]):focus+label {
+				top: -1.125rem;
+				font-style: normal;
+				color: var(--clr-primary);
+			}
+
+			label {
+				position: absolute;
+				left: .5rem;
+				top: 50%;
+				translate: 0 -50%;
+
+				font-size: 1.125rem;
+				font-style: italic;
+				color: hsla(0, 0%, 100%, 0.5);
+				user-select: none;
+				transition: top 300ms, font-style 300ms;
+			}
+
+			.bi {
+				font-size: 1.25rem;
+			}
+
+			button[type="submit"] {
+				color: var(--clr-primary);
+				font-size: 1rem;
+
+				align-self: stretch;
+				text-align: center;
+
+				border: none;
+				background-color: black;
+				width: 100%;
+
+				border-radius: 3rem;
+				cursor: pointer;
+
+				transition: background-color 300ms;
+			}
+
+			button[type="submit"]:is(:hover, :focus) {
+				background-color: var(--clr-primary);
+				color: black;
+			}
+
+			button[type="submit"]:active {
+				translate: 0 1px;
+			}
+		}
+
+		.remember-me {
+			align-items: center;
+			gap: 1rem;
+
+			input[type="checkbox"] {
+				scale: 1.25;
+				margin-right: .125rem;
+			}
+
+			label {
+				user-select: none;
+				cursor: pointer;
+
+				&:hover {
+					color: #303030;
+				}
+			}
+		}
+	}
+}
