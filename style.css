@@ -74,7 +74,7 @@
 				align-self: stretch;
 			}
 
-			input:is([type="email"], [type="password"]):focus+label {
+			input:is([type="email"], [type="password"]):focus + label {
 				top: -1.125rem;
 				left: 0;
 				font-style: normal;
