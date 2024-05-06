@@ -11,7 +11,7 @@
 }
 
 .ctn {
-	font-family: Roboto;
+	font-family: Roboto, sans-serif;
 	color: var(--clr-primary);
 
 	width: 100%;
