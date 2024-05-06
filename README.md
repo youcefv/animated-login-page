@@ -3,7 +3,7 @@
 
 # Preview
 
-![The San Juan Mountains are beautiful!](./images/ScreenShot.png "San Juan Mountains")
+![Screenshot of the login page](./images/ScreenShot.png)
 
 # Description
 
